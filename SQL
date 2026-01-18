@@ -1,0 +1,5 @@
+-- パスワード保存用。intからvarchar(255)に変更
+ALTER TABLE map_login MODIFY lpw VARCHAR(255) NOT NULL;
+
+-- 自分のデータだけを判別するためのカラムを gs_bm_table に追加
+ALTER TABLE gs_bm_table ADD u_id INT(12) AFTER id;
